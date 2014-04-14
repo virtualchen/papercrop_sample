@@ -1,0 +1,12 @@
+<h1>Editing user</h1>
+
+<%= render 'form' %>
+
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag @user.avatar.url(:large) %>
+</p>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

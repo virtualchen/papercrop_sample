@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+
+  <div class="user-crop-preview">
+    <% # Will show a preview box with width=100, height is calculated by the aspect ratio. see model Landscape %>
+    <%= f.crop_preview :avatar %>
+  </div>
+  <div class="user-crop-area">
+    <% # Crop area. Mantains original image proportions. Crop area takes the aspect ratio  %>
+    <%= f.cropbox :avatar, :width => 600 %>
+  </div>
+  <div class="clear"></div>
+
+  <div class="actions">
+    <%= f.submit 'Crop image' %>
+  </div>
+<% end %>
